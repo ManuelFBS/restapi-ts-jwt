@@ -146,3 +146,21 @@ export const profile = async (
 
   res.json(user);
 };
+
+// Google Callback...
+export const googleCallback = async (
+  req: Request,
+  res: Response,
+) => {
+  // Successful authentication, redirect home...
+  res.redirect('/');
+};
+
+// Facebook Callback...
+export const facebookCallback = async (
+  req: Request,
+  res: Response,
+) => {
+  // Successful authentication, redirect home...
+  res.redirect('/');
+};
