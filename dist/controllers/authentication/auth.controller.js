@@ -23,7 +23,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.profile = exports.signin = exports.signup = void 0;
+exports.facebookCallback = exports.googleCallback = exports.profile = exports.signin = exports.signup = void 0;
 const express_validator_1 = require("express-validator");
 const User_1 = __importDefault(require("../../models/User"));
 const token_1 = require("../../libs/tokens/token");
@@ -135,4 +135,16 @@ const profile = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     res.json(user);
 });
 exports.profile = profile;
+// Google Callback...
+const googleCallback = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    // Successful authentication, redirect home...
+    res.redirect('/');
+});
+exports.googleCallback = googleCallback;
+// Facebook Callback...
+const facebookCallback = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    // Successful authentication, redirect home...
+    res.redirect('/');
+});
+exports.facebookCallback = facebookCallback;
 //# sourceMappingURL=auth.controller.js.map
