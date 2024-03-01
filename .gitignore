@@ -6,3 +6,6 @@ node_modules
 
 # Tests...
 TEST.md
+
+# Auxiliar...
+auxiliar.keys.ts
